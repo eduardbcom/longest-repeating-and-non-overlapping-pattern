@@ -1,0 +1,29 @@
+{
+  "name": "longest-repeating-and-non-overlapping-substring",
+  "version": "1.0.0",
+  "description": "Find the longest repeating and non overlapping substring",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests"
+  },
+  "keywords": [
+    "longest",
+    "repeating substring",
+    "non overlapping"
+  ],
+  "author": {
+    "name": "Eduard Bondarenko",
+    "email": "eduardbcom@gmail.com"
+  },
+  "license": "MIT",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
