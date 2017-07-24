@@ -1,21 +1,21 @@
-# longest-repeating-and-non-overlapping-subpart
-## Implementation of the algorithm to find the longest repeating and non overlapping subpart.
+# longest-repeating-and-non-overlapping-pattern
+## Implementation of the algorithm to find the longest repeating and non overlapping pattern.
 
 ### Install:
-```npm install longest-repeating-and-non-overlapping-subpart```
+```npm install -S longest-repeating-and-non-overlapping-pattern```
 
 ### Examples:
 
 ```
-  const findLongestRepeatedSubpart = require('longest-repeating-and-non-overlapping-subpart');
+  const findLongestRepeatedPattern = require('longest-repeating-and-non-overlapping-pattern');
 
-  findLongestRepeatedSubpart('IPPIPPII') === 'IPP'
-  findLongestRepeatedSubpart('IPPIP') === 'IP'
-  findLongestRepeatedSubpart('IPPIPPIP') === 'IPP'
+  findLongestRepeatedPattern('IPPIPPII') === 'IPP'
+  findLongestRepeatedPattern('IPPIP') === 'IP'
+  findLongestRepeatedPattern('IPPIPPIP') === 'IPP'
   
-  findLongestRepeatedSubpart(['I', 'P', 'P', 'I', 'P', 'P', 'I', 'I']) === ['I', 'P', 'P'])
-  findLongestRepeatedSubpart(['I', 'P', 'P', 'I', 'P']) === ['I', 'P'])
-  findLongestRepeatedSubpart(['I', 'P', 'P', 'I', 'P', 'P', 'I', 'P']) === ['I', 'P', 'P'])
+  findLongestRepeatedPattern(['I', 'P', 'P', 'I', 'P', 'P', 'I', 'I']) === ['I', 'P', 'P'])
+  findLongestRepeatedPattern(['I', 'P', 'P', 'I', 'P']) === ['I', 'P'])
+  findLongestRepeatedPattern(['I', 'P', 'P', 'I', 'P', 'P', 'I', 'P']) === ['I', 'P', 'P'])
 ```
 
 ### Suggestions to improvement:

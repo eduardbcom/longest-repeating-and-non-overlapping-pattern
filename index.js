@@ -6,7 +6,7 @@ const _ = require('lodash');
 // http://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/
 // Example: 'IPP' === findLongestRepeatedSubstring('IPPIPPII')
 
-function findLongestRepeatedSubpart(items) {
+function findLongestRepeatedPattern(items) {
     if (!items) {
         return null;
     }
@@ -54,4 +54,4 @@ function findLongestRepeatedSubpart(items) {
     return _.isString(items) ? res.join('') : res;
 }
 
-module.exports = findLongestRepeatedSubpart;
+module.exports = findLongestRepeatedPattern;

@@ -1,7 +1,7 @@
 {
-  "name": "longest-repeating-and-non-overlapping-subpart",
-  "version": "1.0.3",
-  "description": "Find the longest repeating and non overlapping subpart(subarray or substring)",
+  "name": "longest-repeating-and-non-overlapping-pattern",
+  "version": "1.0.4",
+  "description": "Find the longest repeating and non overlapping pattern",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests",
@@ -10,20 +10,20 @@
   },
   "keywords": [
     "longest",
-    "repeating substring",
-    "repeating subpart",
-    "repeating subarray",
+    "repeating pattern",
+    "repeating string",
+    "repeating array",
     "non overlapping"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/eduardbcom/longest-repeating-and-non-overlapping-substring"
+    "url": "https://github.com/eduardbcom/longest-repeating-and-non-overlapping-pattern"
   },
   "author": {
     "name": "Eduard Bondarenko",
     "email": "eduardbcom@gmail.com"
   },
-  "homepage": "https://github.com/eduardbcom/longest-repeating-and-non-overlapping-substring",
+  "homepage": "https://github.com/eduardbcom/longest-repeating-and-non-overlapping-pattern",
   "license": "MIT",
   "directories": {
     "test": "tests"

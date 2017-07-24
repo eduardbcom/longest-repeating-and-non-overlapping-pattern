@@ -3,7 +3,7 @@
 const _ = require('lodash');
 const { assert } = require('chai');
 
-const findLongestRepeatedSubpart = require('../');
+const findLongestRepeatedPattern = require('../');
 
 describe('Test longest repeating and non-overlapping sub-string', () => {
     const tests = [
@@ -36,27 +36,27 @@ describe('Test longest repeating and non-overlapping sub-array', () => {
 
 describe('Test corner cases', () => {
     it('pass nothing', () => {
-        const subpart = findLongestRepeatedSubpart();
+        const subpart = findLongestRepeatedPattern();
 
         assert(subpart === null, 'Error for testing empty param.');
     });
 
     it('pass empty string', () => {
-        const subpart = findLongestRepeatedSubpart('');
+        const subpart = findLongestRepeatedPattern('');
 
         assert(subpart === null, 'Error for testing empty string.');
     });
 
     it('pass empty array', () => {
-        const subpart = findLongestRepeatedSubpart([]);
+        const subpart = findLongestRepeatedPattern([]);
 
         assert(subpart === null, 'Error for testing empty array.');
     });
 
     it('pass not string/array', () => {
-        const subpart1 = findLongestRepeatedSubpart(null);
-        const subpart2 = findLongestRepeatedSubpart({});
-        const subpart3 = findLongestRepeatedSubpart(123);
+        const subpart1 = findLongestRepeatedPattern(null);
+        const subpart2 = findLongestRepeatedPattern({});
+        const subpart3 = findLongestRepeatedPattern(123);
 
         assert(subpart1 === null, 'Error for testing null value.');
         assert(subpart2 === null, 'Error for testing object param.');
@@ -67,7 +67,7 @@ describe('Test corner cases', () => {
 function test(tests) {
     tests.forEach(test => {
         it(`test ${test.req} string`, () => {
-            const subpart = findLongestRepeatedSubpart(test.req);
+            const subpart = findLongestRepeatedPattern(test.req);
 
             assert(_.isEqual(subpart, test.res), `Error for ${test.req} string.`);
         });
