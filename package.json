@@ -1,6 +1,6 @@
 {
   "name": "longest-repeating-and-non-overlapping-subpart",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Find the longest repeating and non overlapping subpart(subarray or substring)",
   "main": "index.js",
   "scripts": {
@@ -15,10 +15,15 @@
     "repeating subarray",
     "non overlapping"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eduardbcom/longest-repeating-and-non-overlapping-substring"
+  },
   "author": {
     "name": "Eduard Bondarenko",
     "email": "eduardbcom@gmail.com"
   },
+  "homepage": "https://github.com/eduardbcom/longest-repeating-and-non-overlapping-substring",
   "license": "MIT",
   "directories": {
     "test": "tests"
