@@ -9,4 +9,11 @@
   findLongestRepeatedSubpart('IPPIPPII') === 'IPP'
   findLongestRepeatedSubpart('IPPIP') === 'IP'
   findLongestRepeatedSubpart('IPPIPPIP') === 'IPP'
+  
+  findLongestRepeatedSubpart(['I', 'P', 'P', 'I', 'P', 'P', 'I', 'I']) === ['I', 'P', 'P'])
+  findLongestRepeatedSubpart(['I', 'P', 'P', 'I', 'P']) === ['I', 'P'])
+  findLongestRepeatedSubpart(['I', 'P', 'P', 'I', 'P', 'P', 'I', 'P']) === ['I', 'P', 'P'])
 ```
+
+### Suggestions to improvement:
+  - add custom comparator function as a second argument and be able to process the array of objects
