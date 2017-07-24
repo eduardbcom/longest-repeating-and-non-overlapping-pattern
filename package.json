@@ -1,6 +1,6 @@
 {
   "name": "longest-repeating-and-non-overlapping-subpart",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Find the longest repeating and non overlapping subpart(subarray or substring)",
   "main": "index.js",
   "scripts": {
