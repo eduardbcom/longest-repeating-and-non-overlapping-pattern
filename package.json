@@ -4,7 +4,9 @@
   "description": "Find the longest repeating and non overlapping substring",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests"
+    "test": "mocha ./tests",
+    "lint": "./node_modules/.bin/eslint ./",
+    "prettier": "prettier --tab-width=4 --print-width 120 --single-quote --write './**/*.js'"
   },
   "keywords": [
     "longest",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.0",
+    "eslint": "^4.3.0",
     "mocha": "^3.4.2"
   },
   "dependencies": {
