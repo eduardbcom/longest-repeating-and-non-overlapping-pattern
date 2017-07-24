@@ -1,6 +1,9 @@
 # longest-repeating-and-non-overlapping-subpart
 ## Implementation of the algorithm to find the longest repeating and non overlapping subpart.
 
+### Install:
+```npm install longest-repeating-and-non-overlapping-subpart```
+
 ### Examples:
 
 ```
