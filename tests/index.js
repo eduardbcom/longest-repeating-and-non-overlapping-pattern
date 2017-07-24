@@ -14,7 +14,8 @@ describe('Test longest repeating and non-overlapping sub-string', () => {
         { req: 'AAAAA', res: 'AA' },
         { req: 'AAAAAA', res: 'AAA' },
         { req: 'IPPIPP', res: 'IPP' },
-        { req: 'IPPIPPII', res: 'IPP' }
+        { req: 'IPPIP', res: 'IP' },
+        { req: 'IPPIPPIP', res: 'IPP' }
     ];
 
     test(tests);
