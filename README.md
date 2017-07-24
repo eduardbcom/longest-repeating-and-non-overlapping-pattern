@@ -4,7 +4,7 @@
 ### Examples:
 
 ```
-  const findLongestRepeatedSubpart = require('longest-repeating-and-non-overlapping-substring');
+  const findLongestRepeatedSubpart = require('longest-repeating-and-non-overlapping-subpart');
 
   findLongestRepeatedSubpart('IPPIPPII') === 'IPP'
   findLongestRepeatedSubpart('IPPIP') === 'IP'
