@@ -1,7 +1,7 @@
 {
-  "name": "longest-repeating-and-non-overlapping-substring",
+  "name": "longest-repeating-and-non-overlapping-subpart",
   "version": "1.0.0",
-  "description": "Find the longest repeating and non overlapping substring",
+  "description": "Find the longest repeating and non overlapping subpart(subarray or substring)",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests",
@@ -11,6 +11,8 @@
   "keywords": [
     "longest",
     "repeating substring",
+    "repeating subpart",
+    "repeating subarray",
     "non overlapping"
   ],
   "author": {
