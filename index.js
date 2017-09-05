@@ -7,12 +7,12 @@ const _ = require('lodash');
 // Example: 'IPP' === findLongestRepeatedSubstring('IPPIPPII')
 
 function findLongestRepeatedPattern(items) {
-    if (!items) {
-        return null;
-    }
-
     if (!(_.isArray(items) || _.isString(items))) {
-        return null;
+        const error = new Error(
+            'items argument should be an array or string,' +
+                `instead it has ${Object.prototype.toString.call(items)} type`
+        );
+        throw error;
     }
 
     const n = items.length;
@@ -51,6 +51,8 @@ function findLongestRepeatedPattern(items) {
         return null;
     }
 
+    // if the input was string returns the pattern in string
+    // otherwise returns an array
     return _.isString(items) ? res.join('') : res;
 }
 

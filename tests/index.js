@@ -2,8 +2,33 @@
 
 const _ = require('lodash');
 const { assert } = require('chai');
+const dataDriven = require('data-driven');
 
 const findLongestRepeatedPattern = require('../');
+
+function typeOf(item) {
+    return Object.prototype.toString.call(item);
+}
+
+const invalidValues = [undefined, null, true, 1, {}, Symbol(), () => {}, Buffer.alloc(0)];
+
+describe('test invalid input params', () => {
+    dataDriven(invalidValues.map(value => ({ type: typeOf(value), item: value })), () => {
+        it('invalid param with type {type}', ctx => {
+            try {
+                findLongestRepeatedPattern(ctx.item);
+                assert.isFalse(true, 'Should not be here');
+            } catch (error) {
+                assert.instanceOf(error, Error);
+
+                assert.strictEqual(
+                    error.message,
+                    'items argument should be an array or string,' + `instead it has ${ctx.type} type`
+                );
+            }
+        });
+    });
+});
 
 describe('Test longest repeating and non-overlapping sub-string', () => {
     const tests = [
@@ -18,7 +43,13 @@ describe('Test longest repeating and non-overlapping sub-string', () => {
         { req: 'IPPIPPIP', res: 'IPP' }
     ];
 
-    test(tests);
+    dataDriven(tests, () => {
+        it('{req}', ctx => {
+            const subpart = findLongestRepeatedPattern(ctx.req);
+
+            assert.strictEqual(subpart, ctx.res, `Error for ${ctx.req} string.`);
+        });
+    });
 });
 
 describe('Test longest repeating and non-overlapping sub-array', () => {
@@ -31,45 +62,25 @@ describe('Test longest repeating and non-overlapping sub-array', () => {
         { req: _.times(6, () => 'A'), res: ['A', 'A', 'A'] }
     ];
 
-    test(tests);
+    dataDriven(tests, () => {
+        it('{req}', ctx => {
+            const subpart = findLongestRepeatedPattern(ctx.req);
+
+            assert.deepEqual(subpart, ctx.res, `Error for ${ctx.req} array.`);
+        });
+    });
 });
 
 describe('Test corner cases', () => {
-    it('pass nothing', () => {
-        const subpart = findLongestRepeatedPattern();
-
-        assert(subpart === null, 'Error for testing empty param.');
-    });
-
     it('pass empty string', () => {
         const subpart = findLongestRepeatedPattern('');
 
-        assert(subpart === null, 'Error for testing empty string.');
+        assert.isNull(subpart, 'Error for testing empty string.');
     });
 
     it('pass empty array', () => {
         const subpart = findLongestRepeatedPattern([]);
 
-        assert(subpart === null, 'Error for testing empty array.');
-    });
-
-    it('pass not string/array', () => {
-        const subpart1 = findLongestRepeatedPattern(null);
-        const subpart2 = findLongestRepeatedPattern({});
-        const subpart3 = findLongestRepeatedPattern(123);
-
-        assert(subpart1 === null, 'Error for testing null value.');
-        assert(subpart2 === null, 'Error for testing object param.');
-        assert(subpart3 === null, 'Error for testing integer param.');
+        assert.isNull(subpart, 'Error for testing empty array.');
     });
 });
-
-function test(tests) {
-    tests.forEach(test => {
-        it(`test ${test.req} string`, () => {
-            const subpart = findLongestRepeatedPattern(test.req);
-
-            assert(_.isEqual(subpart, test.res), `Error for ${test.req} string.`);
-        });
-    });
-}
